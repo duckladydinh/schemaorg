@@ -4554,10 +4554,11 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
 :bestRating a rdf:Property ;
     rdfs:label "bestRating" ;
-    :domainIncludes :Rating ;
+    :domainIncludes :Rating,
+        :Certification ;
     :rangeIncludes :Number,
         :Text ;
-    rdfs:comment "The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed." .
+    rdfs:comment "The highest value allowed in this rating system." .
 
 :billingAddress a rdf:Property ;
     rdfs:label "billingAddress" ;
@@ -8049,7 +8050,8 @@ While such policies are most typically expressed in natural language, sometimes 
 
 :ratingValue a rdf:Property ;
     rdfs:label "ratingValue" ;
-    :domainIncludes :Rating ;
+    :domainIncludes :Rating,
+        :Certification ;
     :rangeIncludes :Number,
         :Text ;
     rdfs:comment "The rating for the content.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator." .
@@ -9524,10 +9526,11 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
 
 :worstRating a rdf:Property ;
     rdfs:label "worstRating" ;
-    :domainIncludes :Rating ;
+    :domainIncludes :Rating,
+        :Certification ;
     :rangeIncludes :Number,
         :Text ;
-    rdfs:comment "The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed." .
+    rdfs:comment "The lowest value allowed in this rating system." .
 
 :xpath a rdf:Property ;
     rdfs:label "xpath" ;
